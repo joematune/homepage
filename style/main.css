@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container {
+    display: inline-block
+}
+#joe-and-godzilla {
+    width: 100%;
+    max-width: 380px;
+}
+svg {
+    display: none;
+    pointer-events: none;
+}
+#svg-noodle-1 {
+    top: 45%;
+    left: calc(50% - 300px);
+    transform: rotate(-105deg);
+}
+#svg-noodle-2 {
+    top: 42%;
+    left: 50%;
+    transform: rotate(-65deg);
+}
+#svg-noodle-3 {
+    top: 60%;
+    left: calc(50% - 150px);
+    transform: rotate(-80deg);
+}
+.noodle-box {
+    position: fixed;
+    width: 300px;
+    height: 180px;
+}
+.noodle-path {
+    fill: none;
+    stroke: #6CFFB1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 8px;
+}
