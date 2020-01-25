@@ -1,4 +1,10 @@
-var noodle1 = createNoodle({
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+let noodle1 = createNoodle({
     element: document.querySelector("#tail-1"),
     startX: 0,
     startY: 15,
@@ -12,7 +18,7 @@ var noodle1 = createNoodle({
         yPhase: 0.5,
     }
 });
-var noodle2 = createNoodle({
+let noodle2 = createNoodle({
     element: document.querySelector("#tail-2"),
     startX: 0,
     startY: 15,
@@ -26,7 +32,7 @@ var noodle2 = createNoodle({
         yPhase: 0.5,
     }
 });
-var noodle3 = createNoodle({
+let noodle3 = createNoodle({
     element: document.querySelector("#tail-3"),
     startX: 0,
     startY: 15,
@@ -41,8 +47,7 @@ var noodle3 = createNoodle({
     }
 });
 
-gsap.set('.noodle-path', { x: -100 });
-
+gsap.set('.noodle-path', { x: -100 }); // hide noodles
 showSVG();
 
 function showSVG() {
@@ -50,7 +55,7 @@ function showSVG() {
     for (i = 0; i < svgs.length; i++) {
         svgs[i].style.display = "inline";
     }
-}
+}; // avoid FOUC
 function createNoodle(options) {
     
     var points = [];
@@ -136,20 +141,21 @@ function cardinalSpline(data, closed, tension) {
     }
 
     return closed ? path + "z" : path;
-}
+};
 function drawNoodle() {
     var tl = gsap.timeline({ defaults: { duration: 2 } });
         tl.to(".noodle-path", { x: "0" });
     return tl;
-};
+}; // animate showing noodle
 function undrawNoodle() {
     var tl = gsap.timeline({ defaults: { duration: 2 } });
     tl.to(".noodle-path", { x: -100 });
     return tl;
-};
-document.querySelector('img').addEventListener('mouseover', () => {
+}; // animate hiding noodle
+let img = document.querySelector('img');
+img.addEventListener('mouseover', () => {
     drawNoodle();
-})
-document.querySelector('img').addEventListener('mouseout', () => {
+});
+img.addEventListener('mouseout', () => {
     undrawNoodle();
-})
+});
