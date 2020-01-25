@@ -1,2 +1,3 @@
 # homepage
-My homepage at my domain name.
+
+Quick and dirty business card style site.
