@@ -1,3 +1,3 @@
 # homepage
 
-Quick and dirty business card style site.
+Quick and dirty site testing Netlify - https://joematune.com/
