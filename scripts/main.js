@@ -143,19 +143,9 @@ function cardinalSpline(data, closed, tension) {
     return closed ? path + "z" : path;
 };
 function drawNoodle() {
-    var tl = gsap.timeline({ defaults: { duration: 2 } });
+    var tl = gsap.timeline({ defaults: { duration: 2, delay: 1.5 } });
         tl.to(".noodle-path", { x: "0" });
     return tl;
 }; // animate showing noodle
-function undrawNoodle() {
-    var tl = gsap.timeline({ defaults: { duration: 2 } });
-    tl.to(".noodle-path", { x: -100 });
-    return tl;
-}; // animate hiding noodle
-let img = document.querySelector('img');
-img.addEventListener('mouseover', () => {
-    drawNoodle();
-});
-img.addEventListener('mouseout', () => {
-    undrawNoodle();
-});
+// animate noodles onload
+document.addEventListener('DOMContentLoaded', drawNoodle());
