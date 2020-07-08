@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    margin: 0;
+    background-color: #FADBD8;
+}
+counter-app {
+    display: grid;
+    justify-items: center;
+    padding: 2em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
+}
+counter-app>div {
+    font-size: 10em;
+    font-family: sans-serif;
+    color: salmon;
+}
+counter-app>button {
+    max-width: fit-content;
+    margin-top: 1em;
+    padding: 0.4em 1em;
+    font-size: 3em;
+    border: 3px solid #FCF5F7;
+    border-radius: 1em;
+    background-color: #FCF5F7;
+    color: indianred;
+    box-shadow: 0px 4px 12px -5px rgba(0,0,0,0.5);
+}
+button:focus {
+    outline: none;
+    border-color: indianred;
+}
