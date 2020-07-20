@@ -1,0 +1,7 @@
+body {
+    display: grid;
+    height: max-content;
+    place-content: center;
+    margin: 0;
+    background-color: #FFE191;
+}

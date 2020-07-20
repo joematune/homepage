@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Oswald', sans-serif;
+        }
+        body {
+            display: grid;
+            height: 100vh;
+            place-content: center;
+            background-color: thistle;
+            background: linear-gradient(180deg, thistle 0%, white 75%);
+        }
+    </style>
+
+    <style>
+        @keyframes adjustWidth {
+            from { width: 80vw; }
+            to { width: 60vw; }
+        }
+
+        .description {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            line-height: 1.8rem;
+            font-weight: 200;
+            border: 3px solid thistle;
+            background-color: white;
+            width: 80vw;
+            font-size: 1.5rem;
+            max-width: 28rem;
+            animation-name: adjustWidth;
+            animation-duration: 6s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        .word {
+            padding: 0 0.1rem;
+        }
+        .dotdotdotPrice {
+            flex-grow: 1;
+            display: flex;
+            /* background-color: cornflowerblue; */
+        }
+        .ellipsis {
+            background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
+            background-position: bottom;
+            background-size: 6px 2px;
+            background-repeat: repeat-x;
+            flex-grow: 1;
+            margin: 0 0.2rem 0.2rem 0.1rem;
+            /* height: 0.5rem; */
+            /* background-color: thistle; */
+        }
+    </style>
+
+    <title>wa-menu Web Component</title>
+</head>
+
+<body>
+
+
+    <div class="description">
+        Our famous smoked pull pork placed on a bed of haloumi fries topped off with fresh guacamole and a tomato salsa. Tossed
+    in BBQ or Chipotle sprinkled with sesame seeds
+    </div>
+
+    <script>
+        let text = document.querySelector('.description');
+        let spanWrapped = text.textContent.replace(/(\S+)/g, '<span class="word">$1</span>');
+        spanWrapped += `
+            <span class="dotdotdotPrice">
+                <span class="ellipsis"></span>
+                <span class="price">R120</span>
+            </span>
+        `;
+        text.innerHTML = spanWrapped;
+    </script>
+
+
+
+</body>
+
+</html>
