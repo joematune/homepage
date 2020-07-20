@@ -66,7 +66,7 @@ customElements.define('shopping-cart',
 
         connectedCallback() {
             let phoneInput = this.querySelector('input');
-            phoneInput.addEventListener('keyup', (e) => { this.phone = e.target.value; });
+            phoneInput.addEventListener('input', (e) => { this.phone = e.target.value; });
 
             this.order.info = {
                 phone: this.getAttribute('phone'),
