@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    height: 98vh;
+    place-content: center;
+}
+svg.freeCodeCamp {
+    width: 90vw;
+    height: auto;
+}
+.yellow02,.green03,.blue04,.lime05,
+.aqua06,.purple07,.pink08   {
+    display: none;
+}
