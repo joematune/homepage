@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
+    <title>Astro City Arcade Stick</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="info"><strong>?</strong></div>
+        <span class="power-control">Power Control System</span>
+        
+        <p class="instructions">
+            Move the joystick <em>up</em>, <em>left</em> <em>down</em>,
+                and <em>right</em> using <span class="key">w</span>, 
+            <span class="key">a</span>, <span class="key">s</span>, and
+            <span class="key">d</span>.
+        </p>
+        <p class="instructions">
+            Use the attack buttons with <span class="key">u</span>, 
+            <span class="key">i</span>, <span class="key">o</span>, 
+            <span class="key">j</span>, <span class="key">k</span>, 
+            and <span class="key">l</span>.
+        </p>
+
+
+        <div class="demo-buttons">
+            <button id="demo1" class="demo"><div class="arrow"></div>1 Demo</button>
+            <button id="demo2" class="demo"><div class="arrow"></div>2 Demo</button>
+            <button id="demo3" class="demo"><div class="arrow"></div>3 Demo</button>
+            <button id="demo4" class="demo"><div class="arrow"></div>4 Demo</button>
+        </div>
+
+
+        <p class="instructions">
+            Know these combos? Let me know.
+        </p>
+        <a  class="twitter-reply"
+            target="_blank"
+            href="https://twitter.com/intent/tweet?hashtags=sf4&text=Combo%201%3A%20%0D%0ACombo%202%3A%20%0D%0A%0D%0A&tw_p=tweetbutton&url=https%3A%2F%2Fjoematune.com%2Flabs%2Fastro-city%2F&via=joematune">
+            <i class="tweet"></i>
+            Tweet!
+        </a>
+    </div>
+
+    <div class="background">
+        <p class="high-res">
+            High resolution graphics and
+            stereo • of • the • art sound
+            double your playing enjoyment!
+        </p>
+        <hr class="green-line">
+        <hr class="green-line">
+        <hr class="green-line">
+    </div>
+
+    <svg class="arcade-controller" width="205px" height="65px" viewBox="0 0 205 65">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            
+            <g id="NEUTRAL">
+                <path class="dust-cover"
+                    d="M42,51 C42,50.6633527 41.9513742,50.3312281 41.8575319,50.0045439 C40.5580051,45.4806236 30.5874691,42 21,42 C11.4174145,42 1.45215213,45.4748733 0.14446066,49.997183 C0.0493142543,50.326222 -7.90650284e-17,50.660806 0,51 C7.53292198,51 12.8942116,51 16.0838688,51 C16.0838688,49.0035422 25.9140116,49.0035422 25.9140116,51 C29.7354519,51 35.097448,51 42,51 Z"
+                    id="back-dust-cover" fill="#7B7B7B"></path>
+                <g id="joystick" transform="translate(5, 0)">
+                    <polygon id="shaft" fill="#BFBFBF" points="11.5 16 20.5 16 20.5 55 11.5 55"></polygon>
+                    <circle id="balltop" fill="#303030" cx="16" cy="16" r="16"></circle>
+                </g>
+                <path class="dust-cover"
+                    d="M21,60 C31.2795175,60 42,56.0204076 42,51 L40.9965099,50.0028106 L27,50 L25.9124711,51 C25.9124711,52.9959438 16.0840897,52.9959438 16.0840897,51 L14.9988585,50.0028106 L0.998957687,50.0028106 L3.55271368e-15,51 C3.55271368e-15,56.0022175 10.7204825,60 21,60 Z"
+                    id="front-dust-cover" fill="#7B7B7B"></path>
+            </g>
+
+            <g id="hk-btn" class="hk btn" transform="translate(162, 44)">
+                <path d="M35,10.5 C35,6.91014913 27.1649831,4 17.5,4 C7.83501688,4 0,6.91014913 0,10.5 L35,10.5 Z"
+                    class="hk back-ring" fill="#7B7B7B"></path>
+                <path
+                    d="M17.5,14.5 C24.0226603,14.5 32,12 32,8.95929511 L32,5.5 L3,5.5 L3,8.95929511 C3,12 10.9773397,14.5 17.5,14.5 Z"
+                    class="hk plunger side" fill="#525252"></path>
+                <ellipse class="hk plunger top" fill="#8E8E8E" cx="17.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+                <path
+                    d="M17.5,17 C27.1649831,17 35,14.0898509 35,10.5 C35,9.15102861 33.8936499,7.89803508 31.9995862,6.85937014 L31.9995862,8.53744645 C31.9995862,11 26.6173922,14 17.5,14 C10.9258449,14 3,11.9296851 3,8.53744645 L3,6.98728978 C1.15705628,7.88982645 0,9.30322154 0,10.5 C0,14.0898509 7.83501688,17 17.5,17 Z"
+                    class="hk front-ring" fill="#7B7B7B"></path>
+            </g>
+
+            <g id="lp-btn" class="lp btn" transform="translate(92, 31)">
+                <path d="M35,10.5 C35,6.91014913 27.1649831,4 17.5,4 C7.83501688,4 0,6.91014913 0,10.5 L35,10.5 Z"
+                    class="lp back-ring" fill="#7B7B7B"></path>
+                <path
+                    d="M17.5,14.5 C24.0226603,14.5 32,12 32,8.95929511 L32,5.5 L3,5.5 L3,8.95929511 C3,12 10.9773397,14.5 17.5,14.5 Z"
+                    class="lp plunger side" fill="#525252"></path>
+                <ellipse class="lp plunger top" fill="#8E8E8E" cx="17.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+                <path
+                    d="M17.5,17 C27.1649831,17 35,14.0898509 35,10.5 C35,9.15102861 33.8936499,7.89803508 31.9995862,6.85937014 L31.9995862,8.53744645 C31.9995862,11 26.6173922,14 17.5,14 C10.9258449,14 3,11.9296851 3,8.53744645 L3,6.98728978 C1.15705628,7.88982645 0,9.30322154 0,10.5 C0,14.0898509 7.83501688,17 17.5,17 Z"
+                    class="lp front-ring" fill="#7B7B7B"></path>
+            </g>
+
+            <g id="mp-btn" class="mp btn" transform="translate(131, 27)">
+                <path d="M35,10.5 C35,6.91014913 27.1649831,4 17.5,4 C7.83501688,4 0,6.91014913 0,10.5 L35,10.5 Z"
+                    class="mp back-ring" fill="#7B7B7B"></path>
+                <path
+                    d="M17.5,14.5 C24.0226603,14.5 32,12 32,8.95929511 L32,5.5 L3,5.5 L3,8.95929511 C3,12 10.9773397,14.5 17.5,14.5 Z"
+                    class="mp plunger side" fill="#525252"></path>
+                <ellipse class="mp plunger top" fill="#8E8E8E" cx="17.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+                <path
+                    d="M17.5,17 C27.1649831,17 35,14.0898509 35,10.5 C35,9.15102861 33.8936499,7.89803508 31.9995862,6.85937014 L31.9995862,8.53744645 C31.9995862,11 26.6173922,14 17.5,14 C10.9258449,14 3,11.9296851 3,8.53744645 L3,6.98728978 C1.15705628,7.88982645 0,9.30322154 0,10.5 C0,14.0898509 7.83501688,17 17.5,17 Z"
+                    class="mp front-ring" fill="#7B7B7B"></path>
+            </g>
+
+            <g id="hp-btn" class="hp btn" transform="translate(170, 27)">
+                <path d="M35,10.5 C35,6.91014913 27.1649831,4 17.5,4 C7.83501688,4 0,6.91014913 0,10.5 L35,10.5 Z"
+                    class="hp back-ring" fill="#7B7B7B"></path>
+                <path
+                    d="M17.5,14.5 C24.0226603,14.5 32,12 32,8.95929511 L32,5.5 L3,5.5 L3,8.95929511 C3,12 10.9773397,14.5 17.5,14.5 Z"
+                    class="hp plunger side" fill="#525252"></path>
+                <ellipse class="hp plunger top" fill="#8E8E8E" cx="17.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+                <path
+                    d="M17.5,17 C27.1649831,17 35,14.0898509 35,10.5 C35,9.15102861 33.8936499,7.89803508 31.9995862,6.85937014 L31.9995862,8.53744645 C31.9995862,11 26.6173922,14 17.5,14 C10.9258449,14 3,11.9296851 3,8.53744645 L3,6.98728978 C1.15705628,7.88982645 0,9.30322154 0,10.5 C0,14.0898509 7.83501688,17 17.5,17 Z"
+                    class="hp front-ring" fill="#7B7B7B"></path>
+            </g>
+
+            <g id="lk-btn" class="lk btn" transform="translate(84, 48)">
+                <path d="M35,10.5 C35,6.91014913 27.1649831,4 17.5,4 C7.83501688,4 0,6.91014913 0,10.5 L35,10.5 Z"
+                    class="lk back-ring" fill="#7B7B7B"></path>
+                <path
+                    d="M17.5,14.5 C24.0226603,14.5 32,12 32,8.95929511 L32,5.5 L3,5.5 L3,8.95929511 C3,12 10.9773397,14.5 17.5,14.5 Z"
+                    class="lk plunger side" fill="#525252"></path>
+                <ellipse class="lk plunger top" fill="#8E8E8E" cx="17.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+                <path
+                    d="M17.5,17 C27.1649831,17 35,14.0898509 35,10.5 C35,9.15102861 33.8936499,7.89803508 31.9995862,6.85937014 L31.9995862,8.53744645 C31.9995862,11 26.6173922,14 17.5,14 C10.9258449,14 3,11.9296851 3,8.53744645 L3,6.98728978 C1.15705628,7.88982645 0,9.30322154 0,10.5 C0,14.0898509 7.83501688,17 17.5,17 Z"
+                    class="lk front-ring" fill="#7B7B7B"></path>
+            </g>
+
+            <g id="mk-btn" class="mk btn" transform="translate(123, 44)">
+                <path d="M35,10.5 C35,6.91014913 27.1649831,4 17.5,4 C7.83501688,4 0,6.91014913 0,10.5 L35,10.5 Z"
+                    class="mk back-ring" fill="#7B7B7B"></path>
+                <path
+                    d="M17.5,14.5 C24.0226603,14.5 32,12 32,8.95929511 L32,5.5 L3,5.5 L3,8.95929511 C3,12 10.9773397,14.5 17.5,14.5 Z"
+                    class="mk plunger side" fill="#525252"></path>
+                <ellipse class="mk plunger top" fill="#8E8E8E" cx="17.5" cy="5.5" rx="14.5" ry="5.5"></ellipse>
+                <path
+                    d="M17.5,17 C27.1649831,17 35,14.0898509 35,10.5 C35,9.15102861 33.8936499,7.89803508 31.9995862,6.85937014 L31.9995862,8.53744645 C31.9995862,11 26.6173922,14 17.5,14 C10.9258449,14 3,11.9296851 3,8.53744645 L3,6.98728978 C1.15705628,7.88982645 0,9.30322154 0,10.5 C0,14.0898509 7.83501688,17 17.5,17 Z"
+                    class="mk front-ring" fill="#7B7B7B"></path>
+            </g>
+
+        </g>
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./combo.js"></script>
+</body>
+</html>
