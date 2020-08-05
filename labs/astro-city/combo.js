@@ -3,75 +3,75 @@ const balltop = document.getElementById('balltop');
 gsap.set('#joystick', { transformOrigin: '50% 100%' });
 
 const duration = 0.1;
-const cancel = `-=${duration/2}`;
-const delay = `+=${duration*2}`;
+const cancel = `-=${duration / 2}`;
+const delay = `+=${duration * 2}`;
 
-const up = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const upTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: 0, yPercent: 0, xPercent: 0 })
-      .to('#balltop', { yPercent: -10 }, 0)
-      .to('.dust-cover', { xPercent: 0, yPercent: -10 }, 0);
+        .to('#balltop', { yPercent: -10 }, 0)
+        .to('.dust-cover', { xPercent: 0, yPercent: -10 }, 0);
     return tl;
 };
 
-const right = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const rightTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: 18.5, yPercent: 0, xPercent: 2.5 })
-      .to('#balltop', { yPercent: 0 }, 0)
-      .to('.dust-cover', { xPercent: 5.0, yPercent: 0 }, 0);
+        .to('#balltop', { yPercent: 0 }, 0)
+        .to('.dust-cover', { xPercent: 5.0, yPercent: 0 }, 0);
     return tl;
 };
 
-const down = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const downTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: 0, yPercent: 10, xPercent: 0 })
-      .to('#balltop', { yPercent: 6 }, 0)
-      .to('.dust-cover', { xPercent: 0, yPercent: 10 }, 0);
+        .to('#balltop', { yPercent: 6 }, 0)
+        .to('.dust-cover', { xPercent: 0, yPercent: 10 }, 0);
     return tl;
 };
 
-const left = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const leftTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: -18.5, yPercent: 0, xPercent: -2.5 })
-      .to('#balltop', { yPercent: 0 }, 0)
-      .to('.dust-cover', { xPercent: -5.0, yPercent: 0 }, 0);
+        .to('#balltop', { yPercent: 0 }, 0)
+        .to('.dust-cover', { xPercent: -5.0, yPercent: 0 }, 0);
     return tl;
 };
 
-const neutral = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const neutralTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: 0, yPercent: 0, xPercent: 0 })
-      .to('#balltop', { yPercent: 0 }, 0)
-      .to('.dust-cover', { xPercent: 0, yPercent: 0 }, 0);
+        .to('#balltop', { yPercent: 0 }, 0)
+        .to('.dust-cover', { xPercent: 0, yPercent: 0 }, 0);
     return tl;
 };
 
-const downRight = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const downRightTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: 20, yPercent: 6, xPercent: 0 })
-      .to('#balltop', { yPercent: 5 }, 0)
-      .to('.dust-cover', { xPercent: 5.5, yPercent: 10 }, 0);
+        .to('#balltop', { yPercent: 5 }, 0)
+        .to('.dust-cover', { xPercent: 5.5, yPercent: 10 }, 0);
     return tl;
 };
 
-const downLeft = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const downLeftTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: -20, yPercent: 6, xPercent: 0 })
-      .to('#balltop', { yPercent: 5 }, 0)
-      .to('.dust-cover', { xPercent: -5.5, yPercent: 10 }, 0);
+        .to('#balltop', { yPercent: 5 }, 0)
+        .to('.dust-cover', { xPercent: -5.5, yPercent: 10 }, 0);
     return tl;
 };
 
-const upRight = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const upRightTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: 17, yPercent: 0, xPercent: 0.5 })
         .to('#balltop', { yPercent: -10 }, 0)
         .to('.dust-cover', { xPercent: 4.0, yPercent: -10 }, 0);
     return tl;
 };
 
-const upLeft = (timeScale = 1) => {
-    let tl = gsap.timeline({ defaults: { duration: duration*timeScale, ease: 'none' } });
+const upLeftTl = (timeScale = 1) => {
+    let tl = gsap.timeline({ defaults: { duration: duration * timeScale, ease: 'none' } });
     tl.to('#joystick', { rotate: -17, yPercent: 0, xPercent: -0.5 })
         .to('#balltop', { yPercent: -10 }, 0)
         .to('.dust-cover', { xPercent: -4.0, yPercent: -10 }, 0);
@@ -79,9 +79,9 @@ const upLeft = (timeScale = 1) => {
 };
 
 const attackButton = (attack, pause) => {
-    let tl = gsap.timeline({ defaults: { duration: duration/2 } });
+    let tl = gsap.timeline({ defaults: { duration: duration / 2 } });
     tl.to(`.${attack}.plunger`, { yPercent: 20 })
-      .to(`.${attack}.plunger`, { yPercent: 0 }, `+=${pause}`);
+        .to(`.${attack}.plunger`, { yPercent: 0 }, `+=${pause}`);
     return tl;
 };
 
@@ -94,54 +94,54 @@ const roundhouse = (pause = 0) => attackButton('hk', pause);
 
 const specialMove = (motions, buttons) => {
     let tl = gsap.timeline();
-        motions.forEach((motion, index) => {
-            if (index === motion.length - 1) {
-                tl.addLabel('lastMotion');
-            }
-            tl.add(motion);
-        });
-    buttons.forEach(button => tl.add(button, `lastMotion-=${duration/2}`));
-    tl.add(neutral());
+    motions.forEach((motion, index) => {
+        if (index === motion.length - 1) {
+            tl.addLabel('lastMotion');
+        }
+        tl.add(motion);
+    });
+    buttons.forEach(button => tl.add(button, `lastMotion-=${duration / 2}`));
+    tl.add(neutralTl());
     return tl;
 };
 
 const shoryuken = (...punches) => specialMove(
-    [right(0.75), down(0.75), downRight(0.75)], punches
-    );
+    [rightTl(0.75), downTl(0.75), downRightTl(0.75)], punches
+);
 
 const hadouken = (...punches) => specialMove(
-    [down(0.75), right(0.75)], punches
-    );
+    [downTl(0.75), rightTl(0.75)], punches
+);
 
 const tatsumaki = (...kicks) => specialMove(
-    [down(), left()], kicks
-    );
+    [downTl(), leftTl()], kicks
+);
 
 const ultra = () => specialMove(
-    [down(0.65), right(0.65), neutral(0.65), down(0.65), right(0.65)], [jab(), strong(), fierce()]
-    );
+    [downTl(0.65), rightTl(0.65), neutralTl(0.65), downTl(0.65), rightTl(0.65)], [jab(), strong(), fierce()]
+);
 
 const dash = (...btns) => specialMove(
-    [right(), neutral(), right()], btns
-    );
+    [rightTl(), neutralTl(), rightTl()], btns
+);
 
 const focusAttack = () => {
     let tl = gsap.timeline();
-    tl.add(strong(duration*2))
-      .add(forward(duration*2), 0);
+    tl.add(strong(duration * 2))
+        .add(forward(duration * 2), 0);
     return tl;
-    };
+};
 
 const fadc = () => {
     let tl = gsap.timeline();
     tl.add(focusAttack())
-      .add(dash(), "<");
+        .add(dash(), "<");
     return tl;
 }
 
 const solarPlexus = () => specialMove(
-    [right()], [fierce()]
-    );
+    [rightTl()], [fierce()]
+);
 
 let combo1Tl = gsap.timeline({
     paused: true,
@@ -170,105 +170,105 @@ let combo4Tl = gsap.timeline({
 
 
 combo1Tl.add(solarPlexus())
-        .add(down(), delay)
-        .add(fierce(), cancel)
-        .add(right())
-        .add(jab(), cancel)
-        .add(neutral(), cancel)
-        .add(fadc())
-        .add(fierce())
-        .add(shoryuken(jab()), cancel)
-        .add(fadc())
-        .add(ultra())
-        .timeScale(0.50);
+    .add(downTl(), delay)
+    .add(fierce(), cancel)
+    .add(rightTl())
+    .add(jab(), cancel)
+    .add(neutralTl(), cancel)
+    .add(fadc())
+    .add(fierce())
+    .add(shoryuken(jab()), cancel)
+    .add(fadc())
+    .add(ultra())
+    .timeScale(0.50);
 
 combo2Tl.add(jab())
-        .add(jab())
-        .add(left())
-        .add(neutral())
-        .add(short())
-        .add(fierce())
-        .timeScale(0.50);
+    .add(jab())
+    .add(leftTl())
+    .add(neutralTl())
+    .add(short())
+    .add(fierce())
+    .timeScale(0.50);
 
 combo3Tl.add(fierce())
-        .add(tatsumaki(fierce()), cancel)
-        .add(strong())
-        .add(fierce(), '<')
-        .addLabel('fff')
-        .add(down())
-        .add(fierce(), cancel)
-        .add(shoryuken(strong(), fierce()))
-        .addLabel('ex-siesmo')
-        .add(down())
-        .add(right())
-        .add(up())
-        .add(neutral())
-        .add(right())
-        .add(strong(), '<')
-        .add(forward(), '<')
-        .add(neutral())
-        .addLabel('sjc-fadc')
-        .add(ultra())
-        .timeScale(0.50);
+    .add(tatsumaki(fierce()), cancel)
+    .add(strong())
+    .add(fierce(), '<')
+    .addLabel('fff')
+    .add(downTl())
+    .add(fierce(), cancel)
+    .add(shoryuken(strong(), fierce()))
+    .addLabel('ex-siesmo')
+    .add(downTl())
+    .add(rightTl())
+    .add(upTl())
+    .add(neutralTl())
+    .add(rightTl())
+    .add(strong(), '<')
+    .add(forward(), '<')
+    .add(neutralTl())
+    .addLabel('sjc-fadc')
+    .add(ultra())
+    .timeScale(0.50);
 
-combo4Tl.add(downRight())
-        .add(downLeft())
-        .add(jab(), '<0.05')
-        .add(strong(), '<')
-        .add(fierce(), '<-0.05')
-        .add(downRight())
-        .add(downLeft())
-        .add(jab(), '<0.05')
-        .add(fierce(), '<')
-        .add(strong(), '<-0.05')
-        .add(downRight())
-        .add(strong(), '<')
-        .add(jab(), '<0.05')
-        .add(fierce(), '<-0.05')
-        .add(downLeft())
-        .add(strong(), '<')
-        .add(downRight())
-        .add(jab(), '<0.05')
-        .add(fierce(), '<-0.05')
-        .add(downLeft())
-        .add(jab(), '<0.05')
-        .add(downRight())
-        .add(strong(), '<')
-        .add(fierce(), '<-0.05')
-        .add(downLeft())
-        .add(jab(), '<0.05')
-        .add(downRight())
-        .add(strong(), '<')
-        .add(fierce(), '<-0.05')
-        .add(downLeft())
-        .add(jab(), '<0.05')
-        .add(downRight())
-        .add(strong(), '<')
-        .add(fierce(), '<-0.05')
-        .add(downLeft())
-        .add(downRight())
-        .add(strong(), '<')
-        .add(jab(), '<0.05')
-        .add(downRight())
-        .add(jab(), '<')
-        .add(strong(), '<-0.05')
-        .add(fierce(), '<0.05')
-        .add(neutral(), '<')
-        .timeScale(1.00);
+combo4Tl.add(downRightTl())
+    .add(downLeftTl())
+    .add(jab(), '<0.05')
+    .add(strong(), '<')
+    .add(fierce(), '<-0.05')
+    .add(downRightTl())
+    .add(downLeftTl())
+    .add(jab(), '<0.05')
+    .add(fierce(), '<')
+    .add(strong(), '<-0.05')
+    .add(downRightTl())
+    .add(strong(), '<')
+    .add(jab(), '<0.05')
+    .add(fierce(), '<-0.05')
+    .add(downLeftTl())
+    .add(strong(), '<')
+    .add(downRightTl())
+    .add(jab(), '<0.05')
+    .add(fierce(), '<-0.05')
+    .add(downLeftTl())
+    .add(jab(), '<0.05')
+    .add(downRightTl())
+    .add(strong(), '<')
+    .add(fierce(), '<-0.05')
+    .add(downLeftTl())
+    .add(jab(), '<0.05')
+    .add(downRightTl())
+    .add(strong(), '<')
+    .add(fierce(), '<-0.05')
+    .add(downLeftTl())
+    .add(jab(), '<0.05')
+    .add(downRightTl())
+    .add(strong(), '<')
+    .add(fierce(), '<-0.05')
+    .add(downLeftTl())
+    .add(downRightTl())
+    .add(strong(), '<')
+    .add(jab(), '<0.05')
+    .add(downRightTl())
+    .add(jab(), '<')
+    .add(strong(), '<-0.05')
+    .add(fierce(), '<0.05')
+    .add(neutralTl(), '<')
+    .timeScale(1.00);
 
 const demo1 = document.getElementById('demo1');
 demo1.addEventListener('click', () => {
-    setTimeout(() => combo1Tl.play(), 500);
+    setTimeout(() => combo1Tl.play(), 800);
 });
 const demo2 = document.getElementById('demo2');
 demo2.addEventListener('click', () => {
-    setTimeout(() => combo2Tl.play(), 500);
+    setTimeout(() => combo2Tl.play(), 800);
 });
 const demo3 = document.getElementById('demo3');
 demo3.addEventListener('click', () => {
-    setTimeout(() => combo3Tl.play(), 500);
+    setTimeout(() => combo3Tl.play(), 800);
 });
 const demo4 = document.getElementById('demo4');
 demo4.addEventListener('click', () => {
-    setTimeout(() => combo4Tl.play(), 500);
+    setTimeout(() => combo4Tl.play(), 800);
 });
