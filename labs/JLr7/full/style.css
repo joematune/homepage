@@ -1,0 +1,58 @@
+body {
+    display: grid;
+    height: 96vh;
+    place-content: center;
+    background-color: #222;
+}
+svg {
+    overflow: visible;
+}
+.watch {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    cursor: pointer;
+    padding: 3%; 
+    width: 94vw;
+    height: 94vh;
+}
+.row>svg.last.seconds {
+    padding-right: 2%;
+}
+div.row {
+    height: 12.5%;
+    width: 82%;
+    display: flex;
+    flex-direction: row;
+}
+.row:nth-child(even) {
+    padding-left: 11%;
+}
+.row.four {
+    padding-left: 0%;
+}
+.quarters.first {
+    padding-left: 14%;
+}
+.quarters.last {
+    padding-right: 2%;
+    margin-right: 7%;
+}
+.led {
+    height: 100%;
+    width: 20%;
+    padding-right: 9%;
+    fill: #555;
+}
+.led.on {
+    fill: #d9ff00; /* Alternate LED color */
+    fill: #13e900; /* Alternate LED color */
+    fill: #4a83ff;
+}
+.blur {
+    fill-opacity: 0%;
+}
+.led.on .blur {
+    fill-opacity: 100%;
+}

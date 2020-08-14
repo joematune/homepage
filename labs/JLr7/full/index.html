@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLr7 - Fullscreen</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <svg class="led-definitions" style="visibility: hidden; position: absolute;">
+        <defs>
+            <filter id="glow" x="-75%" y="-75%" width="250%" height="250%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blurred"></feGaussianBlur>
+                <feMerge>
+                    <feMergeNode in="blurred"></feMergeNode>
+                    <feMergeNode in="blurred"></feMergeNode>
+                </feMerge>
+            </filter>
+            <path id="left" d="M51.1715729,105.828427 L72.1715729,84.8284271 C73.73367,83.26633 76.26633,83.26633 77.8284271,84.8284271 L98.8284271,105.828427 C99.5785726,106.578573 100,107.595988 100,108.656854 L100,255.343146 C100,256.404012 99.5785726,257.421427 98.8284271,258.171573 L77.8284271,279.171573 C76.26633,280.73367 73.73367,280.73367 72.1715729,279.171573 L51.1715729,258.171573 C50.4214274,257.421427 50,256.404012 50,255.343146 L50,108.656854 C50,107.595988 50.4214274,106.578573 51.1715729,105.828427 Z"></path>
+            <path id="right" d="M265.171573,105.828427 L286.171573,84.8284271 C287.73367,83.26633 290.26633,83.26633 291.828427,84.8284271 L312.828427,105.828427 C313.578573,106.578573 314,107.595988 314,108.656854 L314,255.343146 C314,256.404012 313.578573,257.421427 312.828427,258.171573 L291.828427,279.171573 C290.26633,280.73367 287.73367,280.73367 286.171573,279.171573 L265.171573,258.171573 C264.421427,257.421427 264,256.404012 264,255.343146 L264,108.656854 C264,107.595988 264.421427,106.578573 265.171573,105.828427 Z"></path>
+            <path id="top" transform="translate(182, 75) rotate(-90) translate(-182, -75)" d="M158.171573,-1.17157288 L179.171573,-22.1715729 C180.73367,-23.73367 183.26633,-23.73367 184.828427,-22.1715729 L205.828427,-1.17157288 C206.578573,-0.421427361 207,0.59598829 207,1.65685425 L207,148.343146 C207,149.404012 206.578573,150.421427 205.828427,151.171573 L184.828427,172.171573 C183.26633,173.73367 180.73367,173.73367 179.171573,172.171573 L158.171573,151.171573 C157.421427,150.421427 157,149.404012 157,148.343146 L157,1.65685425 C157,0.59598829 157.421427,-0.421427361 158.171573,-1.17157288 Z"></path>
+            <path id="bottom" transform="translate(182, 289) rotate(-90) translate(-182, -289)" d="M158.171573,212.828427 L179.171573,191.828427 C180.73367,190.26633 183.26633,190.26633 184.828427,191.828427 L205.828427,212.828427 C206.578573,213.578573 207,214.595988 207,215.656854 L207,362.343146 C207,363.404012 206.578573,364.421427 205.828427,365.171573 L184.828427,386.171573 C183.26633,387.73367 180.73367,387.73367 179.171573,386.171573 L158.171573,365.171573 C157.421427,364.421427 157,363.404012 157,362.343146 L157,215.656854 C157,214.595988 157.421427,213.578573 158.171573,212.828427 Z"></path>
+        </defs>
+    </svg>
+
+    <div class="watch" style="display: none;">
+
+        <div class="row"> <!-- ROW 1 -->
+            <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _L hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _r hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div class="row"> <!-- ROW 2 -->
+            <svg class="led _7 hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _L hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div class="row"> <!-- ROW 3 -->
+            <svg class="led _L hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _r hours" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div id="row-four" class="row four"> <!-- ROW 4 -->
+            <svg class="led _r quarters first" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 quarters" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J quarters last" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 minutes first" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div class="row"> <!-- ROW 5 -->
+            <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _L minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _r minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div class="row"> <!-- ROW 6 -->
+            <svg class="led _7 minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _L minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div class="row"> <!-- ROW 7 -->
+            <svg class="led _L minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _r minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+        <div class="row"> <!-- ROW 8 -->
+            <svg class="led _r minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#left"></use>
+                <use xlink:href="#left" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 seconds" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _J seconds" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#bottom"></use>
+                <use xlink:href="#bottom" filter="url(#glow)" class="blur"></use>
+            </svg>
+            <svg class="led _7 seconds last" width="364px" height="364px" viewBox="0 0 364 364">
+                <use xlink:href="#top"></use>
+                <use xlink:href="#top" filter="url(#glow)" class="blur"></use>
+                <use xlink:href="#right"></use>
+                <use xlink:href="#right" filter="url(#glow)" class="blur"></use>
+            </svg>
+        </div>
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
