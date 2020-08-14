@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLr7 - How To Tell Time</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <svg class="led-definitions" width="0px" height="0px" viewBox="0 0 0 0" style="visibility: hidden; position: absolute;">
+        <defs>
+            <path id="left" d="M51.1715729,105.828427 L72.1715729,84.8284271 C73.73367,83.26633 76.26633,83.26633 77.8284271,84.8284271 L98.8284271,105.828427 C99.5785726,106.578573 100,107.595988 100,108.656854 L100,255.343146 C100,256.404012 99.5785726,257.421427 98.8284271,258.171573 L77.8284271,279.171573 C76.26633,280.73367 73.73367,280.73367 72.1715729,279.171573 L51.1715729,258.171573 C50.4214274,257.421427 50,256.404012 50,255.343146 L50,108.656854 C50,107.595988 50.4214274,106.578573 51.1715729,105.828427 Z"></path>
+            <path id="right" d="M265.171573,105.828427 L286.171573,84.8284271 C287.73367,83.26633 290.26633,83.26633 291.828427,84.8284271 L312.828427,105.828427 C313.578573,106.578573 314,107.595988 314,108.656854 L314,255.343146 C314,256.404012 313.578573,257.421427 312.828427,258.171573 L291.828427,279.171573 C290.26633,280.73367 287.73367,280.73367 286.171573,279.171573 L265.171573,258.171573 C264.421427,257.421427 264,256.404012 264,255.343146 L264,108.656854 C264,107.595988 264.421427,106.578573 265.171573,105.828427 Z"></path>
+            <path id="top" transform="translate(182, 75) rotate(-90) translate(-182, -75)" d="M158.171573,-1.17157288 L179.171573,-22.1715729 C180.73367,-23.73367 183.26633,-23.73367 184.828427,-22.1715729 L205.828427,-1.17157288 C206.578573,-0.421427361 207,0.59598829 207,1.65685425 L207,148.343146 C207,149.404012 206.578573,150.421427 205.828427,151.171573 L184.828427,172.171573 C183.26633,173.73367 180.73367,173.73367 179.171573,172.171573 L158.171573,151.171573 C157.421427,150.421427 157,149.404012 157,148.343146 L157,1.65685425 C157,0.59598829 157.421427,-0.421427361 158.171573,-1.17157288 Z"></path>
+            <path id="bottom" transform="translate(182, 289) rotate(-90) translate(-182, -289)" d="M158.171573,212.828427 L179.171573,191.828427 C180.73367,190.26633 183.26633,190.26633 184.828427,191.828427 L205.828427,212.828427 C206.578573,213.578573 207,214.595988 207,215.656854 L207,362.343146 C207,363.404012 206.578573,364.421427 205.828427,365.171573 L184.828427,386.171573 C183.26633,387.73367 180.73367,387.73367 179.171573,386.171573 L158.171573,365.171573 C157.421427,364.421427 157,363.404012 157,362.343146 L157,215.656854 C157,214.595988 157.421427,213.578573 158.171573,212.828427 Z"></path>
+        </defs>
+    </svg>
+
+    <div class="info page">
+        <svg class="logo logo-container" width="400px" height="192px" viewBox="0 0 400 192" fill="#6ABD6D">
+                <path id="_7-right" d="M362.816509,37.6534635 L367.394959,33.0013176 C368.944535,31.4267989 371.477114,31.406579 373.051633,32.9561551 C373.066807,32.9710888 373.081862,32.9861435 373.096795,33.0013176 L377.675245,37.6534635 C378.411618,38.40169 378.824327,39.4094151 378.824327,40.4592193 L378.824327,159.214304 C378.824327,160.264108 378.411618,161.271833 377.675245,162.02006 L373.096795,166.672206 C371.547219,168.246724 369.01464,168.266944 367.440121,166.717368 C367.424947,166.702434 367.409893,166.68738 367.394959,166.672206 L362.816509,162.02006 C362.080136,161.271833 361.667428,160.264108 361.667428,159.214304 L361.667428,40.4592193 C361.667428,39.4094151 362.080136,38.40169 362.816509,37.6534635 Z"></path>
+                <path id="_7-top" d="M307.049616,35.5036276 L299.843719,28.1817411 C299.307704,27.6370984 299.307704,26.754058 299.843719,26.2094152 L307.049616,18.8875288 C307.30702,18.6259821 307.656134,18.4790467 308.020157,18.4790467 L358.353794,18.4790467 C358.717818,18.4790467 359.066932,18.6259821 359.324335,18.8875288 L366.530233,26.2094152 C367.066247,26.754058 367.066247,27.6370984 366.530233,28.1817411 L359.324335,35.5036276 C359.066932,35.7651743 358.717818,35.9121097 358.353794,35.9121097 L308.020157,35.9121097 C307.656134,35.9121097 307.30702,35.7651743 307.049616,35.5036276 Z"></path>
+                <path id="r-top" d="M226.412192,105.235879 L219.206294,97.9139929 C218.670279,97.3693501 218.670279,96.4863097 219.206294,95.941667 L226.412192,88.6197805 C226.669595,88.3582339 227.018709,88.2112985 227.382732,88.2112985 L277.71637,88.2112985 C278.080393,88.2112985 278.429507,88.3582339 278.68691,88.6197805 L285.892808,95.941667 C286.428823,96.4863097 286.428823,97.3693501 285.892808,97.9139929 L278.68691,105.235879 C278.429507,105.497426 278.080393,105.644361 277.71637,105.644361 L227.382732,105.644361 C227.018709,105.644361 226.669595,105.497426 226.412192,105.235879 Z"></path>
+                <path id="r-left" d="M208.151003,106.45707 L212.651003,101.890894 C214.201657,100.317436 216.734249,100.29895 218.307707,101.849604 C218.32157,101.863267 218.335334,101.87703 218.348997,101.890894 L222.848997,106.45707 C223.586548,107.205468 224,108.214025 224,109.264777 L224,157.735223 C224,158.785975 223.586548,159.794532 222.848997,160.54293 L218.348997,165.109106 C216.798343,166.682564 214.265751,166.70105 212.692293,165.150396 C212.67843,165.136733 212.664666,165.12297 212.651003,165.109106 L208.151003,160.54293 C207.413452,159.794532 207,158.785975 207,157.735223 L207,109.264777 C207,108.214025 207.413452,107.205468 208.151003,106.45707 Z"></path>
+                <path id="L-bottom" d="M133.078662,168.692228 L125.872764,161.370342 C125.336749,160.825699 125.336749,159.942659 125.872764,159.398016 L133.078662,152.07613 C133.336065,151.814583 133.685179,151.667648 134.049203,151.667648 L184.38284,151.667648 C184.746863,151.667648 185.095977,151.814583 185.353381,152.07613 L192.559278,159.398016 C193.095293,159.942659 193.095293,160.825699 192.559278,161.370342 L185.353381,168.692228 C185.095977,168.953775 184.746863,169.100711 184.38284,169.100711 L134.049203,169.100711 C133.685179,169.100711 133.336065,168.953775 133.078662,168.692228 Z"></path>
+                <path id="L-left" d="M115.07089,26.147642 L119.64934,21.4954961 C121.198916,19.9209774 123.731495,19.9007575 125.306013,21.4503335 C125.321188,21.4652673 125.336242,21.480322 125.351176,21.4954961 L129.929625,26.147642 C130.665999,26.8958684 131.078707,27.9035936 131.078707,28.9533977 L131.078707,147.708482 C131.078707,148.758287 130.665999,149.766012 129.929625,150.514238 L125.351176,155.166384 C123.8016,156.740903 121.269021,156.761123 119.694502,155.211547 C119.679328,155.196613 119.664273,155.181558 119.64934,155.166384 L115.07089,150.514238 C114.334517,149.766012 113.921808,148.758287 113.921808,147.708482 L113.921808,28.9533977 C113.921808,27.9035936 114.334517,26.8958684 115.07089,26.147642 Z"></path>
+                <path id="J-right" d="M80.7570924,26.0280004 L85.3355418,21.3758544 C86.8851179,19.8013358 89.4176971,19.7811158 90.9922158,21.3306919 C91.0073899,21.3456257 91.0224446,21.3606803 91.0373783,21.3758544 L95.6158277,26.0280004 C96.3522012,26.7762268 96.7649095,27.783952 96.7649095,28.8337561 L96.7649095,147.588841 C96.7649095,148.638645 96.3522012,149.64637 95.6158277,150.394597 L91.0373783,155.046742 C89.4878022,156.621261 86.955223,156.641481 85.3807043,155.091905 C85.3655302,155.076971 85.3504756,155.061917 85.3355418,155.046742 L80.7570924,150.394597 C80.0207189,149.64637 79.6080106,148.638645 79.6080106,147.588841 L79.6080106,28.8337561 C79.6080106,27.783952 80.0207189,26.7762268 80.7570924,26.0280004 Z"></path>
+                <path id="J-bottom" d="M25.3333371,168.692228 L18.1274396,161.370342 C17.5914247,160.825699 17.5914247,159.942659 18.1274396,159.398016 L25.3333371,152.07613 C25.5907405,151.814583 25.9398545,151.667648 26.3038779,151.667648 L76.6375152,151.667648 C77.0015386,151.667648 77.3506525,151.814583 77.608056,152.07613 L84.8139535,159.398016 C85.3499683,159.942659 85.3499683,160.825699 84.8139535,161.370342 L77.608056,168.692228 C77.3506525,168.953775 77.0015386,169.100711 76.6375152,169.100711 L26.3038779,169.100711 C25.9398545,169.100711 25.5907405,168.953775 25.3333371,168.692228 Z"></path>
+        </svg>
+        
+        <h1 class="clock">
+            <span id="clockHours">00</span> :
+            <span id="clockMinutes">00</span> :
+            <span id="clockSeconds">00</span>
+        </h1>
+  
+        <div class="watch">
+    
+            <div class="row"> <!-- ROW 1 -->
+                <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _L hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _r hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#top"></use>
+                </svg>
+                <svg class="led _7 hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+            </div>
+    
+            <div class="row"> <!-- ROW 2 -->
+                <svg class="led _7 hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+                <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _L hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+            </div>
+    
+            <div class="row"> <!-- ROW 3 -->
+                <svg class="led _L hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _J hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _7 hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+                <svg class="led _r hours" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#top"></use>
+                </svg>
+            </div>
+    
+            <div id="row-four" class="row four"> <!-- ROW 4 -->
+                <svg class="led _r quarters first" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#top"></use>
+                </svg>
+                <svg class="led _7 quarters" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+                <svg class="led _J quarters last" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _7 minutes first" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+            </div>
+    
+            <div class="row"> <!-- ROW 5 -->
+                <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _L minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _r minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#top"></use>
+                </svg>
+                <svg class="led _7 minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+            </div>
+    
+            <div class="row"> <!-- ROW 6 -->
+                <svg class="led _7 minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+                <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _L minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+            </div>
+    
+            <div class="row"> <!-- ROW 7 -->
+                <svg class="led _L minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _J minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _7 minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+                <svg class="led _r minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#top"></use>
+                </svg>
+            </div>
+    
+            <div class="row"> <!-- ROW 8 -->
+                <svg class="led _r minutes" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#left"></use>
+                    <use xlink:href="#top"></use>
+                </svg>
+                <svg class="led _7 seconds" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+                <svg class="led _J seconds" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#right"></use>
+                    <use xlink:href="#bottom"></use>
+                </svg>
+                <svg class="led _7 seconds last" width="364px" height="364px" viewBox="0 0 364 364">
+                    <use xlink:href="#top"></use>
+                    <use xlink:href="#right"></use>
+                </svg>
+            </div>
+
+            <svg class="dotted-lines" width="1602px" height="1031px" viewBox="0 0 1602 1031">
+                <defs>
+                    <rect id="path-1" x="871" y="30" width="580" height="320"></rect>
+                    <mask id="mask-2" x="0" y="0" width="580" height="320" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <polygon id="path-3" points="871 471 1340 471 1340 360 1451 360 1451 781 1040 781 1040 896 871 896"></polygon>
+                    <mask id="mask-4" x="0" y="0" width="580" height="536" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                </defs>
+                <g stroke-width="1%" fill="none">
+                    <use id="hours-border" mask="url(#mask-2)" stroke="#888" stroke-width="0.5%" stroke-dasharray="1.5%"
+                         xlink:href="#path-1"></use>
+                    <use id="minutes-border" stroke="#888" mask="url(#mask-4)" stroke-width="0.5%" stroke-dasharray="1.5%"
+                         xlink:href="#path-3"></use>
+                    <path id="watch-border" stroke="#222" d="M841.5,0.5 L841.5,930.5 L1482.5,930.5 L1482.5,0.5 L841.5,0.5 Z"></path>
+                </g>
+                <g fill="none" font-family="AndaleMono, Andale Mono" letter-spacing="-1" stroke-width="0.5%" font-size="64">
+                    <path d="M841,190 L601,190" stroke="#222"></path>
+                    <text><tspan fill="#2E2E2E" x="142.0625" y="206">LED x 1 Hour</tspan></text>
+                    <path d="M841,408 L601,408" stroke="#222"></path>
+                    <text><tspan fill="#2E2E2E" x="-7.75" y="424">LED x 15 Minutes</tspan></text>
+                    <path d="M841,628 L601,628" stroke="#222"></path>
+                    <text><tspan fill="#2E2E2E" x="67.15625" y="642">LED x 1 Minute</tspan></text>
+                    <polyline stroke="#222" points="1483 850 1601 850 1601 1030 721 1030 721 850 601 850"></polyline>
+                    <text><tspan fill="#2E2E2E" x="329.078125" y="866">Seconds</tspan></text>
+                </g>
+            </svg>
+
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
