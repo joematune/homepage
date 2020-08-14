@@ -26,6 +26,7 @@ svg.logo {
   padding: 2% 16% 2% 2%;
   background-color: #FAFCFD;
   clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
 h1.clock {
     grid-row: 1 / 2;
