@@ -28,16 +28,6 @@ customElements.define('shopping-cart',
             countValue.textContent = this.getAttribute('count');
             this.appendChild(countValue);
 
-            let plusSign = document.createElement('span');
-            plusSign.classList.add('phone-input');
-            this.appendChild(plusSign);
-            let phoneInput = document.createElement('input');
-            phoneInput.classList.add('phone-input');
-            phoneInput.placeholder = '27-12-345-6789';
-            phoneInput.minLength = 10;
-            phoneInput.maxLength = 11;
-            plusSign.appendChild(phoneInput);
-
             let waLink = document.createElement('a');
             waLink.classList.add('wa-link');
             waLink.setAttribute('href', '');
@@ -51,23 +41,15 @@ customElements.define('shopping-cart',
         get count() { return this.getAttribute('count') }
         set count(value) { this.setAttribute('count', value) }
 
-        get phone() { return this.getAttribute('phone') }
-        set phone(value) { this.setAttribute('phone', value) }
-
-        static get observedAttributes() { return ['count', 'phone'] }
+        static get observedAttributes() { return ['count'] }
 
         attributeChangedCallback(name) {
             if (name === 'count') {
                 this.querySelector('.count').textContent = this.count;
-            } else if (name === 'phone') {
-                console.log('name:', name, 'this.phone:', this.phone);
             }
         }
 
         connectedCallback() {
-            let phoneInput = this.querySelector('input');
-            phoneInput.addEventListener('input', (e) => { this.order.info.phone = e.target.value; });
-
             this.order.info = {
                 phone: this.getAttribute('phone'),
                 currency: this.getAttribute('currency')
