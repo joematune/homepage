@@ -1,119 +1,71 @@
 :root {
-  --title-yellow: #f9a22e;
-  --title-purple: #b07b8b;
-
-  --subtitle-blue: #3695b5;
-
-  --space-white: #eee9ed;
-  --space-black: #060100;
-  --space-blue: #425564;
-
-  --noodle-green: #6cffb1;
+  --neon-green: rgb(37, 252, 77);
 }
 
 body {
   margin: 0;
 }
+
 main {
   width: 100%;
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
 }
-section.about-me {
-  width: 100%;
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
-  display: grid;
-  align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-div.portrait {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-#joe-and-godzilla {
-  width: 100%;
-  max-width: 380px;
-  /* avoid FOUC */
+
+#joe-in-japan,
+h1.hero,
+h2.hero {
   visibility: visible !important;
 }
 
-div.introduction {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-svg.name.heading {
-  width: 100%;
-  max-width: 480px;
-  margin: 2rem 0;
-  overflow: visible;
-}
-.title {
-  font: bold 2rem sans-serif;
-  text-transform: uppercase;
-  stroke: var(--title-purple);
-}
-.title.text {
-  stroke-width: 0.15rem;
-  fill: var(--space-white);
-}
-.title.highlight {
-  stroke-width: 1rem;
-  fill: var(--title-purple);
-}
-.subtitle {
-  font: italic 1rem serif;
-  fill: var(--subtitle-blue);
-  transform: skew(0deg, -20deg);
-}
-p.about-me {
-  max-width: 300px;
-  margin: 0;
-  padding: 1rem;
-  color: var(--space-blue);
-  background-color: var(--space-white);
-  font-family: sans-serif;
-  margin-bottom: 2rem;
-}
-a {
-  color: var(--title-yellow);
+#joe-in-japan {
+  width: auto;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
-svg.noodle-box {
-  display: none;
-  pointer-events: none;
+section {
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
 }
-#svg-noodle-1 {
-  top: 45%;
-  left: calc(50% - 300px);
-  transform: rotate(-105deg);
+
+section.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+  align-items: end;
 }
-#svg-noodle-2 {
-  top: 42%;
-  left: 50%;
-  transform: rotate(-65deg);
+
+h1.hero {
+  font-size: 10vw;
 }
-#svg-noodle-3 {
-  top: 60%;
-  left: calc(50% - 150px);
-  transform: rotate(-80deg);
+h2.hero {
+  font-size: 4vw;
 }
-.noodle-box {
-  position: absolute;
-  width: 300px;
-  height: 180px;
+
+h1,
+h2 {
+  height: min-content;
+  color: var(--neon-green);
+  z-index: 10;
+  margin: 0;
+  font-family: "Crete Round", serif;
 }
-.noodle-path {
-  fill: none;
-  stroke: var(--noodle-green);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 6px;
+
+div.name-and-title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 10;
+  display: grid;
+  justify-items: center;
+}
+
+img.hero {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
